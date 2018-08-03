@@ -30,11 +30,12 @@ public class LoginController {
 
       // Implement your business logic
       if (user.getEmail().equals("sunil@example.com") && user.getPassword().equals("abc@123")) {
-         // Set user dummy data
          user.setFname("Sunil");
          user.setMname("Singh");
          user.setLname("Bora");
          user.setAge(28);
+         // FIXME: 2018/8/3  model 已经有'user'了
+        // model.addAttribute("user",user);
       } else {
          model.addAttribute("message", "Login failed. Try again.");
          return "index";
